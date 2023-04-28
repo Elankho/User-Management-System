@@ -1,0 +1,58 @@
+PHP Developer interview task
+
+Task: Build a Dummy User Management System
+ 
+1. Create a database schema for the user management system
+2. Create a Add User form with Name, Email and Mobile fields and add users using it
+ 
+3. Send verification emails to the email addresses of these users when user is added via that form
+ 
+4. Create another page where all added users are shown in a table
+5. In the table keep a column for verified field - the users who have verified their email will have "Verified" written against their row.
+ 
+Additional Notes:
+ 
+Use PDO for database connection and queries
+Use HTML, CSS, and JavaScript/jQuery to create a user interface for the system
+Use secure coding practices to prevent common vulnerabilities (e.g., SQL injection, XSS)
+Provide documentation and instructions on how to install and use the system.
+ 
+To submit create a public GitHub repository and share the link. Also keep a copy of database there too.
+
+
+Let's get started:
+
+Step 1: Create a database schema for the user management system
+
+Create a new database in your preferred database management system (e.g., MySQL).
+Create a table named "users" with the following columns:
+id (auto-increment, primary key)
+name (varchar)
+email (varchar)
+mobile (varchar)
+verified (boolean)
+
+Step 2: Create an "Add User" form
+
+Create an HTML form with fields for Name, Email, and Mobile.
+Add appropriate form validation to ensure all required fields are filled.
+When the form is submitted, send the form data to a PHP script to handle the insertion into the database.
+
+Step 3: Send verification emails
+
+In the PHP script that handles the user insertion, generate a random verification code/token.
+Store the verification code/token in the database for the newly added user.
+Send an email to the provided user email address containing a verification link that includes the verification code/token.
+When the user clicks the verification link, it should lead to a verification page where you can validate the code/token and mark the user as verified in the database.
+
+Step 4: Create a page to display all users
+
+Create an HTML page with a table structure to display the users' information.
+Use PHP and PDO to fetch all user records from the database.
+Populate the table rows with the retrieved user data.
+Add a column to indicate the verification status of each user.
+
+Step 5: Update the verified status in the table
+
+When a user verifies their email through the verification link, update the "verified" column in the database to reflect the change.
+In the table displaying all users, check the verified status for each user and display "Verified" in the appropriate row.
